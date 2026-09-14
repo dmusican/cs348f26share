@@ -1,3 +1,3 @@
-fun hifriends() {
+fun main() {
     println("Hello world")
 }
