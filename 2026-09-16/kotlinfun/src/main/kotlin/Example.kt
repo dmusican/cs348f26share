@@ -9,8 +9,8 @@ class Salary {
 }
 
 fun main() {
-    pay = Salary()
-    pay.annual = 100
+    val pay = Salary()
+    pay.annual = 100.0
     println("Salary is " + pay.annual)
     println("Euros is " + pay.getSalaryInEuros())
     println("Salary is " + pay.annual)
