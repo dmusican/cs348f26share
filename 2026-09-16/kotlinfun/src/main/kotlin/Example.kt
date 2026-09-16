@@ -1,4 +1,5 @@
-class Salary {
+class Salary(var employeeName: String) {
+
     var annual = 0.0
     fun giveRaise(percent: Double) {
         annual += annual*percent
@@ -9,11 +10,12 @@ class Salary {
 }
 
 fun main() {
-    val pay = Salary()
+    val pay = Salary("Dave")
     pay.annual = 100.0
     println("Salary is " + pay.annual)
     println("Euros is " + pay.getSalaryInEuros())
     println("Salary is " + pay.annual)
     pay.giveRaise(.10)
     println("Salary is " + pay.annual)
+    println(pay.employeeName)
 }
