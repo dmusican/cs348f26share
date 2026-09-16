@@ -1,7 +1,7 @@
 class Salary {
-    val annual = 0
+    var annual = 0.0
     fun giveRaise(percent: Double) {
-        annual = annual + annual*percent
+        annual += annual*percent
     }
     fun getSalaryInEuros(): Double {
         return annual * 0.91
