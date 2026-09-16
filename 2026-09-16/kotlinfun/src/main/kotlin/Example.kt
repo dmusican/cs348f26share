@@ -21,6 +21,6 @@ fun main() {
     println("Salary is " + pay.annual)
     pay.giveRaise(.10)
     println("Salary is " + pay.annual)
-    pay.addXtoEnd()~
+    pay.addXtoEnd()
     println(pay.employeeName)
 }
