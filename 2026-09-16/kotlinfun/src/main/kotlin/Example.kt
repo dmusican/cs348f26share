@@ -7,6 +7,10 @@ class Salary(var employeeName: String) {
     fun getSalaryInEuros(): Double {
         return annual * 0.91
     }
+
+    fun addXtoEnd() {
+        employeeName = employeeName + "X"
+    }
 }
 
 fun main() {
@@ -17,5 +21,6 @@ fun main() {
     println("Salary is " + pay.annual)
     pay.giveRaise(.10)
     println("Salary is " + pay.annual)
+    pay.addXtoEnd()
     println(pay.employeeName)
 }
