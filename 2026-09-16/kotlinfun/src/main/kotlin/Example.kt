@@ -9,7 +9,12 @@ class Salary(var employeeName: String?) {
         }
     }
     fun getSalaryInEuros(): Double {
-        return annual * 0.91
+        val annualLocal = annual
+        if (annualLocal != null) {
+            return annualLocal * 0.91
+        } else {
+            return 0
+        }
     }
 
     fun addXtoEnd() {
