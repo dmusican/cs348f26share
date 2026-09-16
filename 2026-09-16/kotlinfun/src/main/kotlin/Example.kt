@@ -22,10 +22,17 @@ fun main() {
     val pay = Salary(null)
     pay.annual = 100.0
     println("Salary is " + pay.annual)
-    println("Euros is " + pay.getSalaryInEuros())
+    //println("Euros is " + pay.getSalaryInEuros())
     println("Salary is " + pay.annual)
     pay.giveRaise(.10)
     println("Salary is " + pay.annual)
-    pay.addXtoEnd()
+    //pay.addXtoEnd()
     println(pay.employeeName)
+
+    var thing: Int? = null
+    if (thing == null) {
+        thing = 0
+    } else {
+        thing = thing + 1
+    }
 }
