@@ -13,7 +13,7 @@ class Salary(var employeeName: String?) {
         if (annualLocal != null) {
             return annualLocal * 0.91
         } else {
-            return 0
+            return 0.0
         }
     }
 
