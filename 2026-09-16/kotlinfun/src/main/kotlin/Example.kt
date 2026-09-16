@@ -3,8 +3,9 @@ class Salary(var employeeName: String?) {
     var annual: Double? = 0.0
 
     fun giveRaise(percent: Double) {
-        if (annual != null) {
-            annual += annual * percent
+        val annualLocal = annual
+        if (annualLocal != null) {
+            annual = annualLocal * percent
         }
     }
     fun getSalaryInEuros(): Double {
