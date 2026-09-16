@@ -7,3 +7,13 @@ class Salary {
         return annual * 0.91
     }
 }
+
+fun main() {
+    pay = Salary()
+    pay.annual = 100
+    println("Salary is " + pay.annual)
+    println("Euros is " + pay.getSalaryInEuros())
+    println("Salary is " + pay.annual)
+    pay.giveRaise(.10)
+    println("Salary is " + pay.annual)
+}
