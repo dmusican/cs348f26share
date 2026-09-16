@@ -3,9 +3,7 @@ class Salary(var employeeName: String?) {
     var annual: Double? = 0.0
 
     fun giveRaise(percent: Double) {
-        if (annual == null) {
-            // do nothing
-        } else {
+        if (annual != null) {
             annual += annual * percent
  //       }
     }
@@ -29,10 +27,10 @@ fun main() {
     //pay.addXtoEnd()
     println(pay.employeeName)
 
-    var thing: Int? = null
-    if (thing == null) {
-        thing = 0
-    } else {
-        thing = thing + 1
-    }
+//    var thing: Int? = null
+//    if (thing == null) {
+//        thing = 0
+//    } else {
+//        thing = thing + 1
+//    }
 }
