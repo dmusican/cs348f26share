@@ -1,4 +1,4 @@
-class Salary(var employeeName: String) {
+class Salary(var employeeName: String?) {
 
     var annual = 0.0
     fun giveRaise(percent: Double) {
