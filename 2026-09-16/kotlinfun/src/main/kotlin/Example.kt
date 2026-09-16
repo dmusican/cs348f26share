@@ -14,7 +14,7 @@ class Salary(var employeeName: String) {
 }
 
 fun main() {
-    val pay = Salary("Dave")
+    val pay = Salary(null)
     pay.annual = 100.0
     println("Salary is " + pay.annual)
     println("Euros is " + pay.getSalaryInEuros())
