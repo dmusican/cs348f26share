@@ -5,7 +5,7 @@ class Salary(var employeeName: String?) {
     fun giveRaise(percent: Double) {
         if (annual != null) {
             annual += annual * percent
- //       }
+        }
     }
     fun getSalaryInEuros(): Double {
         return annual * 0.91
