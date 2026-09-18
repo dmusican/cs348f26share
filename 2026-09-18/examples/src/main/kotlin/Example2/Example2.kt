@@ -1,5 +1,7 @@
 package Example2
 
+import kotlin.concurrent.thread
+
 fun main() {
     var counter = 0
     for (i in 0..<20) {
