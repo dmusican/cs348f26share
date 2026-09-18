@@ -20,7 +20,7 @@ fun main () {
         //myThread.run() // bad
         myThread.start()
     }
-     
+    for (i in 0..<20) {
         myThread.join()  // wait for thread to finish
         println("Result form myThread is ${myThread.answer}")
     }
