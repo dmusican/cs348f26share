@@ -19,7 +19,7 @@ fun main () {
         val myThread = ExampleThread(i)
         //myThread.run() // bad
         myThread.start()
-        println("Result form myThread is $myThread.answer")
+        println("Result form myThread is ${myThread.answer}")
     }
 
 }
