@@ -15,6 +15,7 @@ class ExampleThread(var id: Int): Thread() {
 fun main () {
     for (i in 0..<20) {
         val myThread = ExampleThread(i)
-        myThread.run()
+        //myThread.run() // bad
+        myThread.start()
     }
 }
