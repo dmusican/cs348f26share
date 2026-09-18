@@ -1,6 +1,10 @@
 
 package Example1 // package for Dave so that multiple copies of function names are ok
 
+class ExampleThread(var id: Int): Thread() {
+
+     
+}
 // Add a bunch of numbers
 fun main () {
     var total = 0L
