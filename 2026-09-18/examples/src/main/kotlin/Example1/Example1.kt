@@ -15,14 +15,16 @@ class ExampleThread(var id: Int): Thread() {
 
 // Add a bunch of numbers
 fun main () {
-    val myThread = ExampleThread(i)
+    val threadList = mutableListOf<ExampleThread>()
     for (i in 0..<20) {
         //myThread.run() // bad
+        val myThread = ExampleThread(i)
+        threadList.add(myThread)
         myThread.start()
     }
-    for (i in 0..<20) {
-        myThread.join()  // wait for thread to finish
-        println("Result form myThread is ${myThread.answer}")
+    for (t in threadList) {
+        t.join()  // wait for thread to finish
+        println("Result form myThread is ${t.answer}")
     }
 
 }
