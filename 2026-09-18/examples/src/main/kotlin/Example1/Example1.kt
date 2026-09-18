@@ -8,6 +8,8 @@ class ExampleThread(var id: Int): Thread() {
             total += j
         }
         println("Total is $total and I am id $id")
+
+        return total
     }
 }
 
