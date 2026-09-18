@@ -7,10 +7,14 @@ class ExampleThread(var id: Int): Thread() {
         for (j in 0..< 100000000) {
             total += j
         }
-        println("Total is $total")
+        println("Total is $total and I am id $id")
     }
 }
 
 // Add a bunch of numbers
 fun main () {
+    for (i in 0..<20) {
+        val myThread = ExampleThread(i)
+        myThread.run()
+    }
 }
