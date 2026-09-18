@@ -2,7 +2,7 @@
 package Example1 // package for Dave so that multiple copies of function names are ok
 
 class ExampleThread(var id: Int): Thread() {
-    var answer = 0
+    var answer = 0L
     override fun run() {
         var total = 0L
         for (j in 0..< 10000000000) {
