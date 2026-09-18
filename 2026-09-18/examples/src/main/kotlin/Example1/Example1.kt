@@ -2,14 +2,14 @@
 package Example1 // package for Dave so that multiple copies of function names are ok
 
 class ExampleThread(var id: Int): Thread() {
+    var answer = 0
     override fun run() {
         var total = 0L
         for (j in 0..< 10000000000) {
             total += j
         }
         println("Total is $total and I am id $id")
-
-        return total
+        answer = total
     }
 }
 
@@ -19,5 +19,7 @@ fun main () {
         val myThread = ExampleThread(i)
         //myThread.run() // bad
         myThread.start()
+        println("Result form myThread is $myThread.answer")
     }
+
 }
