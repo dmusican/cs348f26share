@@ -19,7 +19,7 @@ fun main () {
         val myThread = ExampleThread(i)
         //myThread.run() // bad
         myThread.start()
-        myThread.join()  // wait fo
+        myThread.join()  // wait for thread to finish
         println("Result form myThread is ${myThread.answer}")
     }
 
