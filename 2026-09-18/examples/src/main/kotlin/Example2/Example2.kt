@@ -6,7 +6,9 @@ fun main() {
     var counter = 0
     for (i in 0..<20) {
         val myThread = thread {
-            counter++
+            // Dave will force mayhem
+            val updatedCounter = counter + 1
+            counter = updatedCounter
         }
     }
     println("Counter is $counter")
