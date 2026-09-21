@@ -7,7 +7,7 @@ class PrimesThread(val arr: List<Int>, val low: Int, val high: Int): Thread() {
         // Base case: small portion of the list
         if (high - low < SEQUENTIAL_CUTOFF) {
             for (i in low..<high) {
-                if (isPrime(i)) {
+                if (isPrime(arr[i])) {
                     answer++
                 }
             }
