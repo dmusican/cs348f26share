@@ -8,3 +8,8 @@ fun isPrime(n: Int) : Boolean {
     }
     return true
 }
+
+fun main() {
+    val nums = (1..1000000).toList().shuffled()
+    println(countPrimes(nums))
+}
