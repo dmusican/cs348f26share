@@ -1,12 +1,17 @@
 package day2026_09_30.day2026_09_30
 
 class Bank1(var balance: Int) {
+    private val bankLock = Any()  // big parent object
 
     fun withdraw(amt: Int) {
-        balance -= amt
+        synchronized(bankLock) {
+            balance -= amt
+        }
     }
 
     fun deposit(amt: Int) {
-        balance += amt
+        synchronized(bankLock) {
+            balance += amt
+        }
     }
 }
