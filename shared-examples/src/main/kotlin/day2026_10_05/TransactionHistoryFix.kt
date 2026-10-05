@@ -20,6 +20,7 @@ class TransactionHistoryFix {
     }
 
     fun getCurrentHistory(): List<Int> {
+        // Double check i
         return history.toList()
     }
 }
