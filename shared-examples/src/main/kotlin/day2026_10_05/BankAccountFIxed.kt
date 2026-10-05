@@ -14,7 +14,7 @@ package day2026_10_05// Manager: __________________________________
 // this can happen. Then, propose a fix.
 import kotlin.concurrent.thread
 
-class BankAccountFixed(var balance: Int, var id: Int) {
+class BankAccountFixed(var balance: Int) {
 
     @Synchronized                         // line A
     fun withdraw(amt: Int) {
@@ -27,28 +27,17 @@ class BankAccountFixed(var balance: Int, var id: Int) {
     }                                     // line F
 
     fun transferTo(amt: Int, other: BankAccountFixed) {
-        if (this.id < other.id) {
-            synchronized(this) {
-                synchronized(other) {
-                    this.withdraw(amt)
-                    other.deposit(amt)
-                }
-            }
-        } else {
-            synchronized(other) {
-                synchronized(this) {
-                    this.withdraw(amt)
-                    other.deposit(amt)
-                }
-            }
+        synchronized(this) {
             
+            this.withdraw(amt)
+            other.deposit(amt)
         }
     }
 }
 
 fun main() {
-    val one = BankAccountFixed(1000, 1)
-    val two = BankAccountFixed(2000, 2)
+    val one = BankAccountFixed(1000)
+    val two = BankAccountFixed(2000)
 
     val t1 = thread {
         while (true) {
