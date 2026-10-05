@@ -19,6 +19,7 @@ class TransactionHistoryFix {
         history.remove(value)
     }
 
+    @Synchronized
     fun getCurrentHistory(): List<Int> {
         // Double check i
         return history.toList()
