@@ -1,2 +1,38 @@
 package day2026_10_05
 
+import kotlin.concurrent.thread
+
+// What does it take to fix this class to be threadsafe for all possible uses,
+// not necessarily just the sample main that I provided?
+// Write down the necessary changes.
+class TransactionHistory {
+    var history = mutableListOf<Int>()
+
+    fun add(value: Int) {
+        history.add(value)
+    }
+
+    fun remove(value: Int) {
+        history.remove(value)
+    }
+}
+
+fun main() {
+    // some sample usage only
+    val th = TransactionHistory()
+    val t1 = thread {
+        for (i in 0..<10000) {
+            th.add(i)
+        }
+    }
+
+    val t2 = thread {
+        for (i in 50000..<60000) {
+            th.add(i)
+        }
+    }
+    t1.join()
+    t2.join()
+
+    println(th.history.count())
+}
