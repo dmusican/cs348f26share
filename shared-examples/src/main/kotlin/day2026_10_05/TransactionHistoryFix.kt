@@ -6,7 +6,7 @@ import kotlin.concurrent.thread
 // not necessarily just the sample main that I provided?
 // Write down the necessary changes.
 class TransactionHistoryFix {
-    var history = mutableListOf<Int>()
+    private var history = mutableListOf<Int>()
 
     // same as synchronized(this) for all code in method
     @Synchronized
@@ -17,6 +17,10 @@ class TransactionHistoryFix {
     @Synchronized
     fun remove(value: Int) {
         history.remove(value)
+    }
+
+    fun getCurrentHistory(): List<Int> {
+        return history.toList()
     }
 }
 
@@ -37,5 +41,5 @@ fun main() {
     t1.join()
     t2.join()
 
-    println(th.history.count())
+    println(th.getCurrentHistory().count())
 }
