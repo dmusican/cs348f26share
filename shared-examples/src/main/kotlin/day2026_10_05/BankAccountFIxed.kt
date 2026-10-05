@@ -28,7 +28,7 @@ class BankAccountFixed(var balance: Int) {
 
     fun transferTo(amt: Int, other: BankAccountFixed) {
         synchronized(this) {
-            
+
             this.withdraw(amt)
             other.deposit(amt)
         }
