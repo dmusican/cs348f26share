@@ -14,6 +14,7 @@ class TxObject<T>(var value: T) {
 //var txHistory = mutableMapOf<TxObject<T>, OldAndNew<T>>()
 var txHistory = mutableMapOf<TxObject<Any>, OldAndNew<Any>>()
 
+@Suppress("UNCHECKED_CAST")
 fun main() {
     val t = TxObject(3)
     //txHistory[t] = OldAndNew(3, 7)  DOESN'T WORK
