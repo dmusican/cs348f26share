@@ -2,7 +2,9 @@ import multiprocessing as mp
 import time
 
 def countdown(n, queue):
+    sum = 0
     while n > 0:
+        sum = sum + n
         n -= 1
     queue.put(sum)
 
