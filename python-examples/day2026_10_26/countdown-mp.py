@@ -5,7 +5,7 @@ def countdown(n):
     while n > 0:
         n -= 1
 
-COUNT = int(1000)
+COUNT = int(2e8)
 
 t1 = mp.Process(target=countdown, args=(COUNT, ))
 t2 = mp.Process(target=countdown, args=(COUNT, ))
