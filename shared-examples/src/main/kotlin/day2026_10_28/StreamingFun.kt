@@ -42,7 +42,7 @@ fun main() {
     // when done, total should contain the number of items in the list
     var total = 0
     val answer = IntStream.range(0, 10_000_000)
-//        .parallel()
+        .parallel()
         .mapToDouble {
             val value = total
             total = value + 1
