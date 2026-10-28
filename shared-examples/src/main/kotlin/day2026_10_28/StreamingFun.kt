@@ -7,5 +7,5 @@ fun main() {
         myList.add(i)
     }
 
-    myList.stream().
+    myList.stream().forEach { print("hi ") }
 }
