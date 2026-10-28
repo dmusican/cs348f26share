@@ -1,5 +1,6 @@
 package day2026_10_28
 import java.util.stream.*
+import kotlin.time.measureTime
 
 fun main() {
     val myList = mutableListOf<Int>()
@@ -27,5 +28,15 @@ fun main() {
         .filter { it % 2 == 0 }
         .count()
     println(result)
+
+    // Even more examples!
+    var timeTaken = measureTime {
+        val answer = IntStream.range(0, 10_000_000)
+            .parallel()
+            .mapToDouble { Math.sin(it.toDouble()) }
+            .reduce { a,b -> a + b}
+        println(answer)
+    }
+    println(timeTaken)
 
 }
