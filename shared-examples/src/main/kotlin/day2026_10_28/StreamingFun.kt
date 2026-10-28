@@ -34,7 +34,7 @@ fun main() {
         val answer = IntStream.range(0, 10_000_000)
             .parallel()
             .mapToDouble { Math.sin(it.toDouble()) }
-//            .reduce { a,b -> a + b}
+            .reduce { a,b -> a + b}
         println(answer)
     }
     println(timeTaken)
