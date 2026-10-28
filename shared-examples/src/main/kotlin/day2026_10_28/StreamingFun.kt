@@ -8,4 +8,7 @@ fun main() {
     }
 
     myList.stream().forEach { print("$it ") }
+    println()
+    myList.stream().forEach { print("${it * it}) ") }
+
 }
