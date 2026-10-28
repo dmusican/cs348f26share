@@ -23,4 +23,4 @@ fun main() {
     val thing2 = thing.filter { it % 2 == 0 }
     thing2.forEach{ print("$it ")}
     thing2.forEach{ print("$it ")}
-}}
+}
