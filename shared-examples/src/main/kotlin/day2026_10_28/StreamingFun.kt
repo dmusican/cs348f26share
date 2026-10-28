@@ -17,4 +17,10 @@ fun main() {
     IntStream.range(0, 500)
         .filter { it % 2 == 0 }
         .forEach { print("$it ")}
-}
+
+    println("------")
+    val thing = IntStream.range(0,500)
+    val thing2 = thing.filter { it % 2 == 0 }
+    thing2.forEach{ print("$it ")}
+    thing2.forEach{ print("$it ")}
+}}
