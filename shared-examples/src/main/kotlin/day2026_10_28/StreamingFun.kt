@@ -57,3 +57,5 @@ fun main() {
         .peek { print("B$it ") }
         .sum()
 }
+
+
