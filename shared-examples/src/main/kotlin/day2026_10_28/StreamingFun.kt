@@ -1,5 +1,11 @@
 package day2026_10_28
+import java.util.stream.*
 
 fun main() {
-    println("hello")
+    val myList = mutableListOf<Int>()
+    for (i in 0..<100) {
+        myList.add(i)
+    }
+
+    myList.stream().
 }
