@@ -49,7 +49,7 @@ fun main() {
             Math.sin(it.toDouble())
         }
         .reduce { a,b -> a + b}
-    println(answer)
-    
+    println(total)
+
 
 }
