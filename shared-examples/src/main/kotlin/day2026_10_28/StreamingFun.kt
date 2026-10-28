@@ -51,5 +51,9 @@ fun main() {
         .reduce { a,b -> a + b}
     println(total)
 
-
+    IntStream.range(0, 4)
+        .peek { print("A$it ") }
+        .filter { it % 2 == 1 }
+        .peek { print("B$it ") }
+        .sum()
 }
