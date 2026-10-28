@@ -12,4 +12,9 @@ fun main() {
     println()
 //    myList.stream().forEach { print("${it * it} ") }
 
+    println()
+    // Start with another example
+    IntStream.range(0, 500)
+        .filter { it % 2 == 0 }
+        .forEach { print("$it ")}
 }
