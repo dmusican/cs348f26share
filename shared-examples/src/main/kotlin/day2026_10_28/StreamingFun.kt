@@ -26,6 +26,6 @@ fun main() {
     val result = IntStream.range(0, 500)
         .filter { it % 2 == 0 }
         .count()
-    println(count)
+    println(result)
 
 }
