@@ -4,6 +4,6 @@ def doit(lst):
 def main():
     mylst = [12]
     doit(mylst)
-    print(myst)
+    print(mylst)
 
 main()
