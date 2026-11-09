@@ -7,3 +7,5 @@ def main():
     print(mylst)
 
 main()
+# [12]?
+# [12, 9]?
