@@ -5,4 +5,6 @@ class MyCoordinator():
         return x + 1
 
 server = SimpleXMLRPCServer("localhost", 8000)
-
+coordinator = MyCoordinator()
+server.register_instance(coordinator)
+print('serving')
