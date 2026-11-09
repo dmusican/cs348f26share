@@ -4,6 +4,7 @@ from xmlrpc.server import SimpleXMLRPCServer
 
 class MyCoordinator():
     def example(self, x):
+        print("Hello friend")
         return x + 1
 
 server = SimpleXMLRPCServer(("localhost", 8000))
