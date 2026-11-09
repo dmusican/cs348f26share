@@ -6,7 +6,7 @@ class MyCoordinator():
     def example(self, x):
         return x + 1
 
-server = SimpleXMLRPCServer("localhost", 8000)
+server = SimpleXMLRPCServer(("localhost", 8000))
 coordinator = MyCoordinator()
 server.register_instance(coordinator)
 print('serving')
