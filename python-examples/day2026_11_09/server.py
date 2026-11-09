@@ -3,8 +3,9 @@ from xmlrpc.server import SimpleXMLRPCServer
 # Communicating across computers!
 
 class MyCoordinator():
-    def example(self, x):
+    def example(self, x, lst):
         print("Hello friend")
+        lst.append(9)
         return x + 1
 
 server = SimpleXMLRPCServer(("localhost", 8000))
